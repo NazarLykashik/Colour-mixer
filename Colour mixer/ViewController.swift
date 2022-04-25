@@ -29,20 +29,33 @@ class ViewController: UIViewController {
 
             }
     @IBAction func redSliderMove(_ sender: Any) {
+        //redSlider. = Int(redTextField)
         redLabel.text = String(redSlider.value)
-        backGroundSliders(redSlider: redSlider.value, greenSlider: greenSlider.value, blueSlider: blueSlider.value)
+        backGroundSliders(redSlider: redSlider.value,
+                          greenSlider: greenSlider.value,
+                          blueSlider: blueSlider.value)
     }
 
     @IBAction func greenSliderMove(_ sender: Any) {
         greenLabel.text = String(greenSlider.value)
-        backGroundSliders(redSlider: redSlider.value, greenSlider: greenSlider.value, blueSlider: blueSlider.value)
+        backGroundSliders(redSlider: redSlider.value,
+                          greenSlider: greenSlider.value,
+                          blueSlider: blueSlider.value)
     }
     @IBAction func blueSliderMove(_ sender: Any) {
         blueLabel.text = String(blueSlider.value)
-        backGroundSliders(redSlider: redSlider.value, greenSlider: greenSlider.value, blueSlider: blueSlider.value)
+        backGroundSliders(redSlider: redSlider.value,
+                          greenSlider: greenSlider.value,
+                          blueSlider: blueSlider.value)
     }
-    func backGroundSliders(redSlider: Float, greenSlider:Float, blueSlider:Float){
-        mainLabel?.backgroundColor = UIColor(red: CGFloat(redSlider), green: CGFloat(greenSlider), blue: CGFloat(blueSlider), alpha: 1)
+    
+    func backGroundSliders(redSlider: Float,
+                           greenSlider:Float,
+                           blueSlider:Float){
+        mainLabel?.backgroundColor = UIColor(red: CGFloat(redSlider),
+                                             green: CGFloat(greenSlider),
+                                             blue: CGFloat(blueSlider),
+                                             alpha: 1)
     }
 }
 
