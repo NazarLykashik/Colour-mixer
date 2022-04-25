@@ -16,22 +16,27 @@
                         <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="JIh-8u-bFI">
-                                <rect key="frame" x="16" y="44" width="358" height="128"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                            </view>
                             <slider opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="o2x-4q-Rxo">
                                 <rect key="frame" x="101" y="205" width="201" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <connections>
+                                    <action selector="redSliderMove:" destination="BYZ-38-t0r" eventType="valueChanged" id="544-ja-poV"/>
+                                </connections>
                             </slider>
                             <slider opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="015-Ip-wj2">
                                 <rect key="frame" x="101" y="267" width="201" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <connections>
+                                    <action selector="greenSliderMove:" destination="BYZ-38-t0r" eventType="valueChanged" id="Cjb-aN-edb"/>
+                                    <action selector="redSliderMove:" destination="BYZ-38-t0r" eventType="valueChanged" id="ded-ae-dNk"/>
+                                </connections>
                             </slider>
                             <slider opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="leq-G2-h3a">
                                 <rect key="frame" x="101" y="325" width="201" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <connections>
+                                    <action selector="blueSliderMove:" destination="BYZ-38-t0r" eventType="valueChanged" id="toF-V4-1cR"/>
+                                </connections>
                             </slider>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Red: 0.0" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6bB-yO-SAc">
                                 <rect key="frame" x="16" y="213" width="63" height="21"/>
@@ -72,10 +77,27 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="faH-pU-4kK">
+                                <rect key="frame" x="16" y="44" width="358" height="128"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            </view>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemGray5Color"/>
                     </view>
+                    <connections>
+                        <outlet property="blueLabel" destination="8Za-7E-be7" id="r31-nA-wGf"/>
+                        <outlet property="blueSlider" destination="leq-G2-h3a" id="gYS-hI-hPz"/>
+                        <outlet property="blueTextField" destination="lSf-zI-39g" id="1HF-ee-KQQ"/>
+                        <outlet property="greenLabel" destination="Jxr-Ir-m5P" id="I7H-1e-SZU"/>
+                        <outlet property="greenSlider" destination="015-Ip-wj2" id="iOg-Ix-7WK"/>
+                        <outlet property="greenTextField" destination="KlL-mS-0rp" id="IyK-hg-ftE"/>
+                        <outlet property="mainLabel" destination="faH-pU-4kK" id="9T4-wK-ngT"/>
+                        <outlet property="redLabel" destination="6bB-yO-SAc" id="YMl-M5-rj3"/>
+                        <outlet property="redSlider" destination="o2x-4q-Rxo" id="iIn-RU-G6W"/>
+                        <outlet property="redTextField" destination="1U6-yW-sv1" id="SKD-VD-6BR"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
