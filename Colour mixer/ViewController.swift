@@ -21,41 +21,31 @@ class ViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        // red label
+        // colour labeles
         redLabel.text = String(redSlider.value)
+        greenLabel.text = String(greenSlider.value)
+        blueLabel.text = String(greenSlider.value)
         
-        
-        // setup slider
-        redSlider.minimumValue = 0
-        redSlider.maximumValue = 255
 
             }
     @IBAction func redSliderMove(_ sender: Any) {
         redLabel.text = String(redSlider.value)
-        let backGroundColour = mainLabel?.backgroundColor
-        mainLabel?.backgroundColor = UIColor(red: CGFloat(redSlider.value), green: CGFloat(greenSlider.value), blue: CGFloat(blueSlider.value), alpha: 0.5)
+        backGroundSliders(redSlider: redSlider.value, greenSlider: greenSlider.value, blueSlider: blueSlider.value)
     }
 
     @IBAction func greenSliderMove(_ sender: Any) {
         greenLabel.text = String(greenSlider.value)
-        let backGroundColour = mainLabel?.backgroundColor
-        mainLabel?.backgroundColor = UIColor(red: CGFloat(redSlider.value), green: CGFloat(greenSlider.value), blue: CGFloat(blueSlider.value), alpha: 0.5)
+        backGroundSliders(redSlider: redSlider.value, greenSlider: greenSlider.value, blueSlider: blueSlider.value)
     }
     @IBAction func blueSliderMove(_ sender: Any) {
-        greenLabel.text = String(greenSlider.value)
-        let backGroundColour = mainLabel?.backgroundColor
-        mainLabel?.backgroundColor = UIColor(red: CGFloat(redSlider.value), green: CGFloat(greenSlider.value), blue: CGFloat(blueSlider.value), alpha: 0.5)
+        blueLabel.text = String(blueSlider.value)
+        backGroundSliders(redSlider: redSlider.value, greenSlider: greenSlider.value, blueSlider: blueSlider.value)
+    }
+    func backGroundSliders(redSlider: Float, greenSlider:Float, blueSlider:Float){
+        mainLabel?.backgroundColor = UIColor(red: CGFloat(redSlider), green: CGFloat(greenSlider), blue: CGFloat(blueSlider), alpha: 1)
     }
 }
-        
 
-        
-        
-
- 
-    
-      //      let mainLabelColour = mainLabel.backgroundColor
-      //  mainLabel.backgroundColor = mainLabelColour?.getRed(CGFloat(redSlider.value), green: CGFloat(greenSlider.value), blue: CGFloat(blueSlider.value), alpha: CGFloat = 1)
 
     
 
