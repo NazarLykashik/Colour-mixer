@@ -50,6 +50,13 @@ class ViewController: UIViewController {
                           blueSlider: blueSlider.value)
     }
     
+    @IBAction func redValue(_ sender: Any) {
+        //redTextField = CGFloat(redSlider.value)
+    }
+    @IBAction func greenValue(_ sender: Any) {
+    }
+    @IBAction func blueValue(_ sender: Any) {
+    }
     func backGroundSliders(redSlider: Float,
                            greenSlider:Float,
                            blueSlider:Float){

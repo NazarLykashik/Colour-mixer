@@ -17,7 +17,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="o2x-4q-Rxo">
-                                <rect key="frame" x="87" y="410" width="240" height="31"/>
+                                <rect key="frame" x="87.333333333333314" y="410" width="240" height="31"/>
                                 <color key="tintColor" systemColor="systemRedColor"/>
                                 <connections>
                                     <action selector="redSliderMove:" destination="BYZ-38-t0r" eventType="valueChanged" id="544-ja-poV"/>
@@ -53,16 +53,25 @@
                                 <rect key="frame" x="333.33333333333331" y="411" width="64.666666666666686" height="34"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" enablesReturnKeyAutomatically="YES"/>
+                                <connections>
+                                    <action selector="redValue:" destination="BYZ-38-t0r" eventType="editingDidEnd" id="Xx7-pZ-4V6"/>
+                                </connections>
                             </textField>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="blue   " textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="lSf-zI-39g">
                                 <rect key="frame" x="330" y="527" width="68" height="34"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <action selector="blueValue:" destination="BYZ-38-t0r" eventType="editingDidEnd" id="BNx-PV-arh"/>
+                                </connections>
                             </textField>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="green" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="KlL-mS-0rp">
                                 <rect key="frame" x="332" y="469" width="66" height="34"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <action selector="greenValue:" destination="BYZ-38-t0r" eventType="editingDidEnd" id="p0A-5t-a5S"/>
+                                </connections>
                             </textField>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="faH-pU-4kK">
                                 <rect key="frame" x="16" y="64" width="382" height="313"/>
