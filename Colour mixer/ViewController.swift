@@ -22,28 +22,29 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // colour labeles
-        redLabel.text = String(redSlider.value)
-        greenLabel.text = String(greenSlider.value)
-        blueLabel.text = String(greenSlider.value)
+        redLabel.text = String(format:"%.1f",redSlider.value)
+        greenLabel.text = String(format:"%.1f",greenSlider.value)
+        blueLabel.text = String(format:"%.1f",greenSlider.value)
+        
         
 
             }
     @IBAction func redSliderMove(_ sender: Any) {
         //redSlider. = Int(redTextField)
-        redLabel.text = String(redSlider.value)
+        redLabel.text = String(format:"%.1f",redSlider.value)
         backGroundSliders(redSlider: redSlider.value,
                           greenSlider: greenSlider.value,
                           blueSlider: blueSlider.value)
     }
 
     @IBAction func greenSliderMove(_ sender: Any) {
-        greenLabel.text = String(greenSlider.value)
+        greenLabel.text = String(format:"%.1f",greenSlider.value)
         backGroundSliders(redSlider: redSlider.value,
                           greenSlider: greenSlider.value,
                           blueSlider: blueSlider.value)
     }
     @IBAction func blueSliderMove(_ sender: Any) {
-        blueLabel.text = String(blueSlider.value)
+        blueLabel.text = String(format:"%.1f",blueSlider.value)
         backGroundSliders(redSlider: redSlider.value,
                           greenSlider: greenSlider.value,
                           blueSlider: blueSlider.value)
