@@ -9,12 +9,15 @@ import UIKit
 
 class ViewController: UIViewController {
     @IBOutlet weak var mainLabel: UIView!
+    
     @IBOutlet weak var redSlider: UISlider!
     @IBOutlet weak var greenSlider: UISlider!
     @IBOutlet weak var blueSlider: UISlider!
+    
     @IBOutlet weak var redLabel: UILabel!
     @IBOutlet weak var greenLabel: UILabel!
     @IBOutlet weak var blueLabel: UILabel!
+    
     @IBOutlet weak var redTextField: UITextField!
     @IBOutlet weak var greenTextField: UITextField!
     @IBOutlet weak var blueTextField: UITextField!
@@ -22,6 +25,16 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // colour labeles
+        
+        redSlider.tintColor = .red
+        greenSlider.tintColor = .green
+        
+//        setValueForLabel()
+//
+//        addDoneButtonTo(redTextField)
+//        addDoneButtonTo(greenTextField)
+//        addDoneButtonTo(blueTextField)
+        
         redLabel.text = String(format:"%.1f",redSlider.value)
         greenLabel.text = String(format:"%.1f",greenSlider.value)
         blueLabel.text = String(format:"%.1f",greenSlider.value)
@@ -30,8 +43,8 @@ class ViewController: UIViewController {
 
             }
     @IBAction func redSliderMove(_ sender: Any) {
-        //redSlider. = Int(redTextField)
         redLabel.text = String(format:"%.1f",redSlider.value)
+        redTextField.text = String(format: "%.1f",redSlider.value)
         backGroundSliders(redSlider: redSlider.value,
                           greenSlider: greenSlider.value,
                           blueSlider: blueSlider.value)
@@ -39,19 +52,21 @@ class ViewController: UIViewController {
 
     @IBAction func greenSliderMove(_ sender: Any) {
         greenLabel.text = String(format:"%.1f",greenSlider.value)
+        greenTextField.text = String(format:"%.1f",greenSlider.value)
         backGroundSliders(redSlider: redSlider.value,
                           greenSlider: greenSlider.value,
                           blueSlider: blueSlider.value)
     }
     @IBAction func blueSliderMove(_ sender: Any) {
         blueLabel.text = String(format:"%.1f",blueSlider.value)
+        blueTextField.text = String(format:"%.1f",blueSlider.value)
         backGroundSliders(redSlider: redSlider.value,
                           greenSlider: greenSlider.value,
                           blueSlider: blueSlider.value)
     }
     
-    @IBAction func redValue(_ sender: Any) {
-       // redTextField = (redLabel.text?.hashValue)
+    @IBAction func redValue(_ sender: UISlider) {
+       // redTextField.text = String(from: 0)
     }
     @IBAction func greenValue(_ sender: Any) {
     }
