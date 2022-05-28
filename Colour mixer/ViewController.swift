@@ -51,7 +51,7 @@ class ViewController: UIViewController {
     }
     
     @IBAction func redValue(_ sender: Any) {
-        //redTextField = CGFloat(redSlider.value)
+       // redTextField = (redLabel.text?.hashValue)
     }
     @IBAction func greenValue(_ sender: Any) {
     }
